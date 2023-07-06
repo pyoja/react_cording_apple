@@ -21,6 +21,13 @@ function App() {
     <div className="App">
       <div className="black-nav">
         <h4>React Blog</h4>
+        <button
+          onClick={() => {
+            setTitle(["여자코트 추천", "콜드브루카페", "유명한 수영장"]);
+          }}
+        >
+          제목바꾸기버튼
+        </button>
       </div>
       <div className="list">
         <h4>
@@ -37,6 +44,18 @@ function App() {
         <h4>{title[2]}</h4>
         <p>2020-07-06</p>
       </div>
+
+      <Modal />
+    </div>
+  );
+}
+
+function Modal() {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
     </div>
   );
 }
