@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 //1. class대신 className
@@ -7,13 +8,29 @@ import "./App.css";
 
 function App() {
   let post = "강남 우동 맛집";
+  let [title, setTitle] = useState([
+    "마곡나루맛집추천",
+    "콜드브루카페",
+    "유명한 수영장",
+  ]);
 
   return (
     <div className="App">
       <div className="black-nav">
-        <h4>표자의 블로그</h4>
+        <h4>React Blog</h4>
       </div>
-      <h4>{post}</h4>
+      <div className="list">
+        <h4>{title[0]}</h4>
+        <p>2020-07-06</p>
+      </div>
+      <div className="list">
+        <h4>{title[1]}</h4>
+        <p>2020-07-06</p>
+      </div>
+      <div className="list">
+        <h4>{title[2]}</h4>
+        <p>2020-07-06</p>
+      </div>
     </div>
   );
 }
