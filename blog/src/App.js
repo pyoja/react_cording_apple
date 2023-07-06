@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useState } from "react";
 import "./App.css";
 
@@ -13,6 +15,7 @@ function App() {
     "콜드브루카페",
     "유명한 수영장",
   ]);
+  let [likes, setLikes] = useState(0);
 
   return (
     <div className="App">
@@ -20,7 +23,10 @@ function App() {
         <h4>React Blog</h4>
       </div>
       <div className="list">
-        <h4>{title[0]}</h4>
+        <h4>
+          {title[0]} <span onClick={() => setLikes(likes + 1)}>👍</span>
+          {likes}
+        </h4>
         <p>2020-07-06</p>
       </div>
       <div className="list">
